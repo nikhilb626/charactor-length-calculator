@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #333232;
+    }
+    h1{
+        color:white;
+        text-align: center;
+    }
+
+    #container{
+        height: 125PX;
+        width: 350px;
+        background: pink;
+        margin: auto;
+
+    }
+
+    #word{
+        margin-left: 10px;
+        margin-top: 20px;
+
+    }
+    #output{
+        height: 25px;
+        background: white;
+        margin: 25px auto;
+        padding-left: 5px;
+        font-size: 24px;
+    }
+</style>
+<body>
+    <h1>sentence letter length calculator</h1>
+    <div id="container">
+        <input type="text" id="word" placeholder="type in your words here">
+        <button id=btn>Calculate length</button>
+        <div id="output"></div>
+    </div>
+
+
+<script>
+    let btn= document.getElementById('btn');
+    let output=document.getElementById('output');
+
+    btn.addEventListener('click',function(){
+        let str=document.getElementById('word').value;
+        output.innerHTML=str.length;
+    })
+</script>
+</body>
+</html>
